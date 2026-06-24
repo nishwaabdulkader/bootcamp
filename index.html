@@ -7,6 +7,9 @@
 <title>Nishwa Abdul Kader | Portfolio</title>
 
 <style>
+/* ===== GOOGLE FONT ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 *{
     margin:0;
     padding:0;
@@ -15,28 +18,28 @@
 }
 
 body{
-    font-family:Arial, sans-serif;
-    line-height:1.6;
-    background:#f4f4f4;
-    color:#333;
+    font-family:'Poppins',sans-serif;
+    background:#0f172a;
+    color:#ffffff;
 }
 
-/* Navbar */
+/* ===== NAVBAR ===== */
 .navbar{
-    background:#222;
-    color:white;
+    background:#020617;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:15px 30px;
+    padding:18px 8%;
     position:sticky;
     top:0;
     z-index:1000;
+    box-shadow:0 2px 15px rgba(0,0,0,0.4);
 }
 
 .logo{
-    font-size:24px;
-    font-weight:bold;
+    font-size:1.8rem;
+    font-weight:700;
+    color:#8b5cf6;
 }
 
 .nav-links{
@@ -45,129 +48,210 @@ body{
 }
 
 .nav-links li{
-    margin-left:20px;
+    margin-left:25px;
 }
 
 .nav-links a{
-    color:white;
     text-decoration:none;
-    font-weight:bold;
+    color:white;
+    font-weight:500;
+    transition:0.3s;
 }
 
 .nav-links a:hover{
-    color:#00bfff;
+    color:#8b5cf6;
 }
 
 .menu-toggle{
     display:none;
     font-size:28px;
     cursor:pointer;
-}
-
-/* Header */
-header{
-    background:linear-gradient(135deg,#007bff,#00bfff);
     color:white;
-    text-align:center;
-    padding:60px 20px;
 }
 
-header img{
-    width:180px;
-    height:180px;
-    border-radius:50%;
-    border:5px solid white;
+/* ===== HERO SECTION ===== */
+.hero{
+    min-height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:60px;
+    padding:50px 10%;
+}
+
+.hero-image img{
+    width:280px;
+    height:280px;
     object-fit:cover;
-    margin-bottom:15px;
+    border-radius:50%;
+    border:5px solid #8b5cf6;
+    box-shadow:0 0 35px rgba(139,92,246,0.6);
 }
 
-header h1{
-    margin-bottom:10px;
+.hero-content h1{
+    font-size:3.5rem;
+    color:#8b5cf6;
 }
 
-/* Sections */
+.hero-content h3{
+    margin:10px 0;
+    color:#cbd5e1;
+}
+
+.hero-content p{
+    max-width:600px;
+    line-height:1.8;
+    color:#d1d5db;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:12px 28px;
+    background:#8b5cf6;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#a78bfa;
+    transform:translateY(-3px);
+}
+
+/* ===== SECTION ===== */
 section{
-    max-width:1000px;
-    margin:auto;
-    padding:50px 20px;
+    padding:80px 10%;
 }
 
-section h2{
+.section-title{
     text-align:center;
-    margin-bottom:25px;
-    color:#007bff;
+    color:#8b5cf6;
+    margin-bottom:40px;
+    font-size:2.3rem;
 }
 
 .card{
-    background:white;
-    padding:25px;
-    border-radius:10px;
-    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    background:#1e293b;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.3);
 }
 
-ul,ol{
-    padding-left:20px;
+/* ===== ABOUT ===== */
+.about p{
+    text-align:center;
+    line-height:1.8;
+    color:#d1d5db;
 }
 
-.skills-list{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+/* ===== SKILLS ===== */
+.skills-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
     gap:15px;
 }
 
-.skills-list li{
-    background:#007bff;
-    color:white;
-    list-style:none;
-    text-align:center;
-    padding:12px;
-    border-radius:6px;
+.skill{
+    background:#8b5cf6;
+    padding:12px 22px;
+    border-radius:30px;
+    font-weight:500;
+    transition:0.3s;
 }
 
-.project{
+.skill:hover{
+    transform:scale(1.08);
+    background:#a78bfa;
+}
+
+/* ===== EDUCATION ===== */
+.education ul{
+    list-style:none;
+}
+
+.education li{
     margin-bottom:15px;
     padding:15px;
-    background:#f8f9fa;
-    border-left:5px solid #007bff;
+    background:#111827;
+    border-left:5px solid #8b5cf6;
+    border-radius:8px;
 }
 
-/* Contact Form */
-form{
-    display:flex;
-    flex-direction:column;
-    gap:15px;
+/* ===== PROJECTS ===== */
+.projects-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
 }
 
-input,textarea{
-    padding:12px;
-    border:1px solid #ccc;
-    border-radius:5px;
+.project-card{
+    background:#1e293b;
+    padding:25px;
+    border-radius:15px;
+    transition:0.3s;
+    border:1px solid transparent;
+}
+
+.project-card:hover{
+    transform:translateY(-8px);
+    border-color:#8b5cf6;
+    box-shadow:0 0 20px rgba(139,92,246,0.4);
+}
+
+.project-card h3{
+    color:#8b5cf6;
+    margin-bottom:10px;
+}
+
+/* ===== CONTACT ===== */
+.contact-form{
+    max-width:700px;
+    margin:auto;
+}
+
+.contact-form input,
+.contact-form textarea{
     width:100%;
-}
-
-button{
-    background:#007bff;
-    color:white;
+    padding:14px;
+    margin-bottom:15px;
     border:none;
-    padding:12px;
-    border-radius:5px;
-    cursor:pointer;
-    font-size:16px;
-}
-
-button:hover{
-    background:#0056b3;
-}
-
-/* Footer */
-footer{
-    background:#222;
+    border-radius:8px;
+    background:#111827;
     color:white;
-    text-align:center;
-    padding:20px;
 }
 
-/* Responsive Navbar */
+.contact-form button{
+    width:100%;
+    padding:14px;
+    border:none;
+    background:#8b5cf6;
+    color:white;
+    font-size:1rem;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.contact-form button:hover{
+    background:#a78bfa;
+}
+
+/* ===== FOOTER ===== */
+footer{
+    background:#020617;
+    text-align:center;
+    padding:25px;
+    margin-top:50px;
+}
+
+footer p{
+    color:#cbd5e1;
+}
+
+/* ===== RESPONSIVE ===== */
 @media(max-width:768px){
 
     .menu-toggle{
@@ -177,12 +261,13 @@ footer{
     .nav-links{
         display:none;
         flex-direction:column;
-        position:absolute;
-        top:65px;
-        left:0;
         width:100%;
-        background:#222;
+        position:absolute;
+        top:70px;
+        left:0;
+        background:#020617;
         text-align:center;
+        padding:20px 0;
     }
 
     .nav-links.active{
@@ -193,13 +278,18 @@ footer{
         margin:15px 0;
     }
 
-    header img{
-        width:140px;
-        height:140px;
+    .hero{
+        flex-direction:column;
+        text-align:center;
     }
 
-    section{
-        padding:30px 15px;
+    .hero-content h1{
+        font-size:2.5rem;
+    }
+
+    .hero-image img{
+        width:220px;
+        height:220px;
     }
 }
 </style>
@@ -207,13 +297,11 @@ footer{
 
 <body>
 
-<!-- Navbar -->
+<!-- NAVBAR -->
 <nav class="navbar">
-    <div class="logo">Portfolio</div>
+    <div class="logo">Nishwa</div>
 
-    <div class="menu-toggle" id="menu-toggle">
-        ☰
-    </div>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
 
     <ul class="nav-links" id="nav-links">
         <li><a href="#about">About</a></li>
@@ -224,117 +312,119 @@ footer{
     </ul>
 </nav>
 
-<!-- Header -->
-<header>
-    <img src="https://via.placeholder.com/180" alt="Profile Image">
+<!-- HERO SECTION -->
+<section class="hero">
 
-    <h1>Nishwa Abdul Kader</h1>
+    <div class="hero-image">
+        <img src="https://via.placeholder.com/300" alt="Profile Image">
+    </div>
 
-    <p>B.Tech CSE (AI & ML) Student | Web Developer | AI Enthusiast</p>
-</header>
+    <div class="hero-content">
+        <h1>Nishwa Abdul Kader</h1>
+        <h3>B.Tech CSE (AI & ML) Student</h3>
 
-<!-- About -->
-<section id="about">
-    <h2>About Me</h2>
-
-    <div class="card">
         <p>
-            Hello! I am Nishwa Abdul Kader, a B.Tech Computer Science
-            Engineering student specializing in Artificial Intelligence
-            and Machine Learning at Jain University Kochi.
-            I am passionate about web development, programming,
-            and AI technologies.
+            Passionate about Artificial Intelligence, Machine Learning,
+            Web Development and emerging technologies. I enjoy building
+            innovative solutions and continuously learning new skills.
+        </p>
+
+        <a href="#contact" class="btn">Contact Me</a>
+    </div>
+
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2 class="section-title">About Me</h2>
+
+    <div class="card about">
+        <p>
+            I am a Computer Science Engineering student specializing in
+            Artificial Intelligence and Machine Learning at Jain University
+            Kochi. My interests include AI, software development,
+            web technologies, and problem-solving. I am always eager to
+            learn and work on exciting projects that create real-world impact.
         </p>
     </div>
 </section>
 
-<!-- Skills -->
+<!-- SKILLS -->
 <section id="skills">
-    <h2>Skills</h2>
+    <h2 class="section-title">Skills</h2>
 
     <div class="card">
-        <ul class="skills-list">
-            <li>HTML5</li>
-            <li>CSS3</li>
-            <li>JavaScript</li>
-            <li>Java</li>
-            <li>Python</li>
-            <li>AI & ML</li>
+        <div class="skills-container">
+            <div class="skill">HTML5</div>
+            <div class="skill">CSS3</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">Java</div>
+            <div class="skill">Python</div>
+            <div class="skill">Machine Learning</div>
+            <div class="skill">AI</div>
+            <div class="skill">Git & GitHub</div>
+        </div>
+    </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+    <h2 class="section-title">Education</h2>
+
+    <div class="card education">
+        <ul>
+            <li><strong>B.Tech CSE (AI & ML)</strong><br>Jain University Kochi</li>
+            <li><strong>Higher Secondary Education</strong></li>
+            <li><strong>Secondary School Education</strong></li>
         </ul>
     </div>
 </section>
 
-<!-- Education -->
-<section id="education">
-    <h2>Education</h2>
-
-    <div class="card">
-        <ol>
-            <li>B.Tech CSE (AI & ML) - Jain University Kochi</li>
-            <li>Higher Secondary Education</li>
-            <li>Secondary School Education</li>
-        </ol>
-    </div>
-</section>
-
-<!-- Projects -->
+<!-- PROJECTS -->
 <section id="projects">
-    <h2>Projects</h2>
+    <h2 class="section-title">Projects</h2>
 
-    <div class="card">
+    <div class="projects-grid">
 
-        <div class="project">
+        <div class="project-card">
             <h3>Portfolio Website</h3>
-            <p>Personal responsive portfolio website using HTML, CSS and JavaScript.</p>
+            <p>Responsive personal portfolio website built using HTML, CSS and JavaScript.</p>
         </div>
 
-        <div class="project">
-            <h3>AI Based Plagiarism Detection</h3>
-            <p>Machine learning project for detecting plagiarism in documents.</p>
+        <div class="project-card">
+            <h3>AI Plagiarism Detector</h3>
+            <p>Machine learning project for identifying plagiarism in documents.</p>
         </div>
 
-        <div class="project">
+        <div class="project-card">
             <h3>Blood Donation Camp Manager</h3>
-            <p>Web application for managing blood donation camps efficiently.</p>
+            <p>Web application to manage blood donation camps and donor records.</p>
         </div>
 
     </div>
 </section>
 
-<!-- Contact -->
+<!-- CONTACT -->
 <section id="contact">
-    <h2>Contact Me</h2>
+    <h2 class="section-title">Contact Me</h2>
 
     <div class="card">
+        <form class="contact-form" id="contactForm">
 
-        <form id="contactForm">
+            <input type="text" id="name" placeholder="Your Name" required>
 
-            <input
-                type="text"
-                id="name"
-                placeholder="Enter Your Name"
-                required>
+            <input type="email" id="email" placeholder="Your Email" required>
 
-            <input
-                type="email"
-                id="email"
-                placeholder="Enter Your Email"
-                required>
+            <textarea id="message" rows="6"
+            placeholder="Your Message" required></textarea>
 
-            <textarea
-                id="message"
-                rows="5"
-                placeholder="Enter Your Message"
-                required></textarea>
-
-            <button type="submit">Submit</button>
+            <button type="submit">Send Message</button>
 
         </form>
-
     </div>
 </section>
 
-<!-- Footer -->
+<!-- FOOTER -->
 <footer>
     <p>© 2026 Nishwa Abdul Kader | All Rights Reserved</p>
 </footer>
@@ -349,20 +439,14 @@ toggle.addEventListener("click", () => {
 });
 
 // Contact Form Alert
-document
-.getElementById("contactForm")
+document.getElementById("contactForm")
 .addEventListener("submit", function(event){
 
     event.preventDefault();
 
-    const name =
-        document.getElementById("name").value;
-
-    const email =
-        document.getElementById("email").value;
-
-    const message =
-        document.getElementById("message").value;
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
 
     alert(
         "Form Submitted Successfully!\n\n" +
